@@ -12,6 +12,12 @@ import { CartContextProvider } from './src/contexts/CartContext';
 
 OneSignal.setAppId('570a1972-0dc8-49f2-b1af-e65700301043')
 
+OneSignal.setEmail('rodrigo@email.com');
+
+OneSignal.promptForPushNotificationsWithUserResponse(response => {
+  console.log(response);
+})
+
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
 
